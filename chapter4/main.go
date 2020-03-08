@@ -29,5 +29,4 @@ func main() {
 	a = int(b)
 	fmt.Println(a)
 	fmt.Printf("%T\n", a)
-
 }
