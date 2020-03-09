@@ -61,4 +61,5 @@ func big() {
 
 func bendo() {
 	fmt.Println("bendo")
+	ha
 }
