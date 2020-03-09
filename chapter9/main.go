@@ -18,7 +18,6 @@ func main() {
 }
 
 // Template: func (r receiver) identifier(params) (returns) {...}
-
 func foo() {
 	fmt.Println("Foo")
 }
