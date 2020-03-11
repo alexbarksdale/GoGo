@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Using range
 func main() {
 	// Callbacks
 	ii := []int{1, 2, 3, 4, 5, 6}
