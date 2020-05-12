@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-// Create a new type of 'deck' (a new slice of strings)
+// Create a new type of 'deck' which is a slice of strings
 type deck []string
 
-// Any variable of type DECK gets access to the printDeck() method
-func (d deck) printDeck() {
+// SYNTAX: func [receiver] funcName() {}
+func (d deck) print() {
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
