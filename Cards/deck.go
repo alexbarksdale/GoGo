@@ -4,7 +4,9 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/rand"
 	"strings"
+	"time"
 )
 
 // Create a new type of 'deck' which is a slice of strings
@@ -52,4 +54,12 @@ func newDeckFromFile(filename string) deck {
 
 	s := strings.Split(string(bs), ",")
 	return deck(s)
+}
+
+func (d deck) shuffle() {
+	rand.Seed(time.Now().UnixNano())
+	for i := len(d) - 1; i > 0; i-- {
+		newPos := rand.Intn(i + 1)
+		d[i], d[newPos] = d[newPos], d[i]
+	}
 }
