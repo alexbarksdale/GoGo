@@ -1,3 +1,5 @@
+# Random notes for personal use
+
 # Function receiver
 * SYNTAX: func [receiver] funcName(){}
 ```
@@ -29,3 +31,20 @@ func (pointerToPerson *person) updateName() {
 ### Conversion
 - Turn `address` into `value` with `*address`
 - Turn `value` into `address` with `&value`
+
+# Value Types
+### Types that need pointers to change
+- int
+- float
+- string
+- bool
+- structs
+
+# Reference Types
+### Types that don't need pointers to change
+- slices
+- maps
+- channels
+- pointers
+- functions
+
