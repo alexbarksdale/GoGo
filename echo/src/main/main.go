@@ -8,6 +8,7 @@ import (
 	"net/http"
 
 	"github.com/labstack/echo"
+	"github.com/labstack/echo/middleware"
 )
 
 // Not an efficient way to do all these structs, but just a quick way for learning purposes
@@ -38,6 +39,17 @@ func main() {
 	e.POST("/dogs", addDog)
 	e.POST("/hamsters", addHamster)
 
+	// GROUPING
+	g := e.Group("/admin")
+
+	// logs the server interaction
+	g.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
+		Format: `[${time_rfc3339}] ${status} ${method} ${host}${path} ${latency_human}` + "\n",
+	}))
+
+	g.GET("/main", mainAdmin)
+
+	// Starts echo instance
 	e.Start(":8000")
 }
 
@@ -120,4 +132,8 @@ func addHamster(c echo.Context) error {
 
 	log.Printf("This is your hamster: %#v", hamster)
 	return c.String(http.StatusOK, "We got your hamster")
+}
+
+func mainAdmin(c echo.Context) error {
+	return c.String(http.StatusOK, "Secret admin page")
 }
