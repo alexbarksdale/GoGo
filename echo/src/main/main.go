@@ -28,9 +28,10 @@ type Hamster struct {
 }
 
 func main() {
-
 	// New echo instance
 	e := echo.New()
+
+	e.Use(ServerHeader)
 
 	e.GET("/", home)
 	e.GET("/cats/:data", getCats)
@@ -45,6 +46,14 @@ func main() {
 	// logs the server interaction
 	g.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
 		Format: `[${time_rfc3339}] ${status} ${method} ${host}${path} ${latency_human}` + "\n",
+	}))
+
+	g.Use(middleware.BasicAuth(func(username, password string, c echo.Context) (bool, error) {
+		// *Check in the DB if the password valid*
+		if username == "bob" && password == "123" {
+			return true, nil
+		}
+		return false, nil
 	}))
 
 	g.GET("/main", mainAdmin)
@@ -136,4 +145,15 @@ func addHamster(c echo.Context) error {
 
 func mainAdmin(c echo.Context) error {
 	return c.String(http.StatusOK, "Secret admin page")
+}
+
+// ======= MIDDLEWARE ======
+
+// Custom header
+func ServerHeader(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(c echo.Context) error {
+		c.Response().Header().Set(echo.HeaderServer, "TestServer/1.0")
+		c.Response().Header().Set("Anything", "CrazyHeader")
+		return next(c)
+	}
 }
