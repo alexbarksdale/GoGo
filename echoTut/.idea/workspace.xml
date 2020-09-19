@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb81627b-f4d0-4ead-acc6-34c28dfb6b1e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tronics/config.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronics/products.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tronics/tronics.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/.idea/mongo-tut.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mongo-tut/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,10 +108,10 @@
       <screen x="0" y="23" width="2560" height="1057" />
     </state>
     <state x="533" y="387" key="#Notifications/0.23.2560.1057/-1920.23.1920.1057@0.23.2560.1057" timestamp="1600277729826" />
-    <state x="548" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600227526688">
+    <state x="548" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600298818073">
       <screen x="0" y="23" width="2560" height="1057" />
     </state>
-    <state x="548" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1057/-1920.23.1920.1057@0.23.2560.1057" timestamp="1600227526688" />
+    <state x="548" y="360" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1057/-1920.23.1920.1057@0.23.2560.1057" timestamp="1600298818073" />
     <state x="566" y="352" key="EditFileWatcherDialog" timestamp="1600227212037">
       <screen x="0" y="23" width="2560" height="1057" />
     </state>
