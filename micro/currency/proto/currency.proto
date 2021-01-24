@@ -3,8 +3,13 @@ syntax = "proto3";
 option go_package = ".;pb";
 
 message RateRequest {
-    string base = 1;
-    string destination = 2;
+    enum Currencies {
+        EUR=0;
+        USD=1;
+        JPY=2;
+    }
+    Currencies base = 1;
+    Currencies destination = 2;
 }
 
 message RateResponse {

@@ -17,7 +17,7 @@ func NewCurrencyServer(l hclog.Logger) *Currency {
 }
 
 func (c *Currency) GetRate(ctx context.Context, req *pb.RateRequest) (*pb.RateResponse, error) {
-	c.log.Info("Handle GetRate", "base", req.GetBase(), "destination", req.GetDestination())
+	c.log.Info("Handle GetRate", "base:", req.GetBase(), "destination:", req.GetDestination())
 
 	return &pb.RateResponse{Rate: 0.5}, nil
 }
